@@ -1,6 +1,6 @@
 # 🤖 Local AI Agent
 
-Локальный AI-агент, работающий через OpenAI GPT-4 и LangChain, который может управлять вашей системой, искать информацию в интернете и использовать специализированные инструменты.
+Локальный AI-агент, работающий через OpenAI GPT-4o-mini и LangGraph, который может управлять вашей системой, искать информацию в интернете и использовать специализированные инструменты.
 
 ## 🌟 Возможности
 
@@ -17,8 +17,8 @@
 ## 🛠 Технологический стек
 
 - **Язык:** Python 3.12
-- **LLM:** `gpt-4` (OpenAI)
-- **Фреймворк:** `LangChain` (AgentExecutor)
+- **LLM:** `gpt-4o-mini` (OpenAI)
+- **Фреймворк:** `LangGraph` (StateGraph / React Agent)
 - **Библиотеки:** `requests`, `duckduckgo-search`, `qrcode`, `python-dotenv`
 
 ## 🚀 Быстрый старт
@@ -29,9 +29,10 @@ pip install -r agent/requirements.txt
 ```
 
 ### 2. Настройка API ключа
-Создайте файл `.env` в папке `agent/` и добавьте ваш ключ OpenAI:
+Создайте файл `.env` в корне проекта и добавьте ваш ключ OpenAI и URL прокси:
 ```env
 OPENAI_API_KEY=sk-your-openai-api-key-here
+OPENAI_BASE_URL=https://api.proxyapi.ru/openai/v1
 ```
 
 ### 3. Запуск
@@ -52,7 +53,7 @@ python -m agent.run
 
 ## 📁 Структура проекта
 
-- `agent.py`: Логика инициализации LLM и управления памятью.
+- `agent.py`: Логика инициализации LLM (LangGraph) и управления памятью.
 - `tools.py`: Определение всех функций (инструментов), доступных агенту.
 - `run.py`: Точка входа, реализующая CLI-интерфейс.
 - `memory.json`: Хранилище истории общения.
