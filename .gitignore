@@ -1,5 +1,4 @@
 .env
-.env.example
 *.log
 memory.json
 qr_code.png
