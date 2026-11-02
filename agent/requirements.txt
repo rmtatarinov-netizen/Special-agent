@@ -1,0 +1,9 @@
+openai
+langchain
+langchain-openai
+duckduckgo-search>=6.1.0
+requests
+python-dotenv
+qrcode[pil]
+colorama>=0.4.6
+pyTelegramBotAPI
